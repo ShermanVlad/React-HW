@@ -1,0 +1,24 @@
+.quoteBox{
+    margin: 20px;
+    background: lightgrey;
+    border: black 5px solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.quoteBox>h2,h3{
+    text-align: center;
+}
+.quoteBox>h4{
+    color: white;
+}
+.authorName{
+    font-weight: bold;
+}
+.quoteBox:hover{
+    transform: scale(1.02);
+    border: red 5px solid;
+
+}
