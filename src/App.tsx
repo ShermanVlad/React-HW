@@ -1,34 +1,12 @@
-import React, {
-    FC,
-    useEffect,
-    useState
-} from 'react';
-import './App.css';
-import UserComponent from './components/userComponent'
-import IUserModel
-    from "./models/userModel";
-import {
-    getUsers
-} from "./servises/users.api.service";
+import React, {FC} from 'react';
+import UsersComponent from './components/usersComponent';
 
-
-const App:FC = () => {
-
-    const [users,setUsers    ]=useState<IUserModel[]>([])
-    useEffect(() => {
-        getUsers().then(value => {setUsers(value.data)})
-
-        return ()=> {
-            console.log(users)
-        }
-    }, []);
-  return (
-      <>
-          {
-              users.map(({id, lastName, firstName}, index)=><UserComponent key={index} id={id} lastName={lastName} firstName={firstName}/>)
-          }
-      </>
-  );
+const App: FC = () => {
+    return (
+        <div>
+            <UsersComponent/>
+        </div>
+    );
 };
 
 export default App;
