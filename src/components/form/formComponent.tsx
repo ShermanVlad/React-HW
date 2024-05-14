@@ -9,10 +9,13 @@ import {
     joiResolver
 } from "@hookform/resolvers/joi";
 import postValidator
-    from "../../Validators/postValidator";
+    from "../../validators/postValidator";
 
 import styles from "./formBody.module.css"
-interface IFormProps {
+import {
+    poster
+} from "../../services/post.api.service";
+ export interface IFormProps {
     userId: number,
     title: string,
     body: string
@@ -33,19 +36,7 @@ const FormComponent: FC = () => {
 
     function customHandler(data: IFormProps) {
         console.log('Your data is posted in JSONPlaceholder');
-        fetch('https://jsonplaceholder.typicode.com/posts/1', {
-            method: 'PUT',
-            body: JSON.stringify({
-                title: data.title,
-                body: data.body,
-                userId: data.userId,
-            }),
-            headers: {
-                'Content-type': 'application/json; charset=UTF-8',
-            },
-        })
-            .then((response) => response.json())
-            .then((json) => console.log(json));
+        poster(data).then()
     }
 
     return (
