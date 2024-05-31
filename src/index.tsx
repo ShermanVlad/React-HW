@@ -5,8 +5,8 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import React from "react";
 import ErrorLayout from "./layouts/ErrorLayout";
 import MainLayout from "./layouts/MainLayout";
-import CarsPage from "./pages/CarsPage";
-import AuthPage from "./pages/AuthPage";
+import CarsPage from "./pages/carsPage/CarsPage";
+import AuthPage from "./pages/authPage/AuthPage";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

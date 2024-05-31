@@ -1,6 +1,6 @@
 import React from 'react';
-import HeaderComponent from "../components/HeaderComponent";
-import FooterComponent from "../components/FooterComponent";
+import HeaderComponent from "../components/headerComponent/HeaderComponent";
+import FooterComponent from "../components/footerComponent/FooterComponent";
 
 const ErrorLayout = () => {
     return (

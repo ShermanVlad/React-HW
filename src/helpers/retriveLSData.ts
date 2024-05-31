@@ -1,12 +1,14 @@
-const retrieveLSData=<T,> (key: string)=>{
-    const pairJSON = localStorage.getItem(key) || "";
-
-    if (!!pairJSON){
+const retrieveLSData = <T, >(key: string) => {
+    const pairJSON = localStorage.getItem(key) || '';
+    const pair = JSON.parse(pairJSON);
+    if (!pairJSON) {
         return {} as T;
     }
 
-    const pair = JSON.parse(pairJSON);
     return pair as T;
+
 }
 
-export {retrieveLSData}
+export {
+    retrieveLSData
+}
