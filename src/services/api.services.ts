@@ -45,7 +45,7 @@ const authService = {
 }
 
 const carsService = {
-    getCars: async () => {
+    getCars: async ():Promise<ICarPaginatedModel | undefined> => {
 
         try {
             const response = await axiosInstance.get<ICarPaginatedModel>('/cars');
@@ -57,14 +57,9 @@ const carsService = {
                 const refreshToken = retrieveLSData<ITokenObtainPair>('tokenPair').refresh;
                 await authService.refresh(refreshToken);
                 await carsService.getCars();
-
-
             }
-
         }
-
     }
-
 }
 
 export {

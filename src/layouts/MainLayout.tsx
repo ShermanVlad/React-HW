@@ -1,9 +1,9 @@
-import React from "react";
+import React, {FC} from "react";
 import {Outlet} from "react-router-dom";
 import HeaderComponent from "../components/headerComponent/HeaderComponent";
 import FooterComponent from "../components/footerComponent/FooterComponent";
 
-const MainLayout = () => {
+const MainLayout:FC = () => {
     return (
         <div style={{margin:0, padding:0}}>
             <HeaderComponent/>
@@ -13,4 +13,4 @@ const MainLayout = () => {
     );
 };
 
-export default MainLayout;
+export default MainLayout
