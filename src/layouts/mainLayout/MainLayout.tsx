@@ -1,11 +1,12 @@
 import React, {FC} from "react";
 import {Outlet} from "react-router-dom";
-import HeaderComponent from "../components/headerComponent/HeaderComponent";
-import FooterComponent from "../components/footerComponent/FooterComponent";
+import HeaderComponent from "../../components/headerComponent/HeaderComponent";
+import FooterComponent from "../../components/footerComponent/FooterComponent";
+import styles from './MainLayout.module.css'
 
 const MainLayout:FC = () => {
     return (
-        <div style={{margin:0, padding:0}}>
+        <div className={styles.mainLay}>
             <HeaderComponent/>
             <Outlet/>
             <FooterComponent/>

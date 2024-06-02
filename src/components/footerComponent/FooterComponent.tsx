@@ -3,7 +3,6 @@ import styles from './FooterComponent.module.css'
 const FooterComponent: FC = () => {
     return (
         <div  className={styles.footerComp}>
-            <hr/>
             <h3>Footer</h3>
         </div>
     );

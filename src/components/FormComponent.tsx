@@ -18,8 +18,8 @@ const FormComponent: FC = () => {
             <form onSubmit={handleSubmit(authenticate)}>
                 <h3>Login</h3>
                 { isAuthState? <div>You are logged in</div>: <div>You need to login</div>}
-                <input type="text" {...register('username')}/>
-                <input type="text" {...register('password')}/>
+                <input type="text" {...register('username')} defaultValue={'Sherman'}/>
+                <input type="text" {...register('password')} defaultValue={'Sherman1@'}/>
                 <button>login</button>
             </form>
         </div>
