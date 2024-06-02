@@ -2,6 +2,7 @@ import React, {FC, useState} from 'react';
 import {useForm} from "react-hook-form";
 import {AuthDataModel} from "../models/AuthDataModel";
 import {authService} from "../services/api.services";
+import {NavLink} from "react-router-dom";
 
 const FormComponent: FC = () => {
 
@@ -22,6 +23,8 @@ const FormComponent: FC = () => {
                 <input type="text" {...register('password')} defaultValue={'Sherman1@'}/>
                 <button>login</button>
             </form>
+            <br/>
+            <NavLink to={'/users'}>...or create new user</NavLink>
         </div>
     );
 };
