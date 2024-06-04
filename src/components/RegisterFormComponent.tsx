@@ -17,8 +17,8 @@ const RegisterFormComponent: FC = () => {
         <div>
             <form onSubmit={handleSubmit(registration)}>
                 <h3>Registration</h3>
-                <input type="text" {...register('username')}>Enter username</input>
-                <input type="text" {...register('password')}>Enter password</input>
+                <input type="text" {...register('username')}/>
+                <input type="text" {...register('password')}/>
                 <button>register</button>
             </form>
         </div>
