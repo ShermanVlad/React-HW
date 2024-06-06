@@ -1,13 +1,13 @@
-import React, {FC, useContext} from 'react';
+import React, {FC} from 'react';
 import {IUserModel} from "../../models/IUserModel";
-import {useContextProvider} from "../../context/ContextProvide";
+import {useZustand} from "../../zustand/ContextProvide";
 
 interface IProps{
     user: IUserModel
 }
 
 const UserComponent:FC<IProps> = ({user}) => {
-    const {userStore:{setFavoriteUser}} = useContextProvider()
+    const {userSlice:{setFavoriteUser}} = useZustand()
     return (
         <div key={user.id}>
             {user.id}: {user.name} - <b>{user.username}</b> <button onClick={()=>{setFavoriteUser(user)}}>set as a favorite</button>

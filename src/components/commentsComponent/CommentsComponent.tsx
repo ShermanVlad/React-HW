@@ -1,10 +1,10 @@
 import React from 'react';
 import CommentComponent from "../commentComponent/CommentComponent";
-import {useContextProvider} from "../../context/ContextProvide";
+import {useZustand} from "../../zustand/ContextProvide";
 
 const CommentsComponent = () => {
 
-    const {commentStore: {allComments}}=useContextProvider()
+    const {commentSlice: {allComments}}=useZustand()
 
     return (
         <div>
