@@ -10,7 +10,7 @@ const PostsComponent = () => {
         <div>
             <ul>
                 {
-                    allPosts.map(post=> <li key={post.id}><PostComponent key={post.id} post={post}/></li> )
+                    allPosts.map(post => <li key={post.id}><PostComponent key={post.id} post={post}/></li>)
                 }
             </ul>
         </div>
