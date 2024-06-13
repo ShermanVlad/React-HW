@@ -32,7 +32,6 @@ const loadUsers = createAsyncThunk(
 const loadUserById = createAsyncThunk(
     'userSlice/loadUserById',
     async (id: string, thunkAPI) => {
-        if (id) {
             try {
                 const user = await UserService.getById(id)
                 return thunkAPI.fulfillWithValue(user)
@@ -40,7 +39,6 @@ const loadUserById = createAsyncThunk(
                 const error = e as AxiosError;
                 return thunkAPI.rejectWithValue(error.response?.data)
             }
-        }
         return null;
     }
 )
