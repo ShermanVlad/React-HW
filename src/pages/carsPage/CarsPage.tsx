@@ -26,6 +26,7 @@ const CarsPage = () => {
                 try {
                     await carsService.getCars(query.get('page') || '1').then(value => {
                         if (value?.items) {
+                            // console.log(value.items)
                             setCarsPaginatedObj(value)
                         } else {
                             console.log("You haven't any car")
